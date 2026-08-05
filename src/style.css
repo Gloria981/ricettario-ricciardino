@@ -91,7 +91,8 @@ main {
   letter-spacing: 0.03em;
 }
 
-.tempo {
+.tempo,
+.porzioni {
   color: #8a7f74;
   font-size: 0.9rem;
 }

@@ -48,6 +48,7 @@ Frontmatter YAML + corpo markdown per il procedimento:
 ---
 titolo: "Torta al cioccolato"
 tempo_preparazione: "45 minuti"
+porzioni: "4 persone"
 tipo_piatto: "dolce"
 immagine: "/immagini/torta-al-cioccolato.jpg"
 tags:
@@ -72,6 +73,7 @@ Campi:
 
 - **titolo** (obbligatorio): nome della ricetta.
 - **tempo_preparazione** (opzionale): solo se indicato nella fonte originale, non va inventato.
+- **porzioni** (opzionale): per quante persone/porzioni sono le quantità indicate, solo se presente nella fonte originale (es. "4 persone").
 - **tipo_piatto** (obbligatorio): uno tra `antipasto`, `primo`, `secondo`, `contorno`, `dolce`.
 - **immagine** (opzionale): percorso assoluto `/immagini/<slug>.<estensione>`, solo se nello screenshot originale era presente una foto del piatto.
 - **tags** (obbligatorio): il nome della ricetta, un tag per ogni ingrediente principale (solo il nome dell'ingrediente, non la quantità), più il tipo di piatto. Sempre minuscolo.

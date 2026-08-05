@@ -17,6 +17,7 @@ Se l'utente allega più screenshot in un solo messaggio e sono ricette diverse, 
 2. **Estrai le informazioni testuali** dallo screenshot:
    - Nome della ricetta
    - Tempo di preparazione, solo se indicato esplicitamente nello screenshot (altrimenti ometti il campo, non inventarlo)
+   - Porzioni/numero di persone a cui si riferiscono le quantità, solo se indicato esplicitamente nello screenshot (altrimenti ometti il campo, non inventarlo)
    - Elenco ingredienti, uno per riga, mantenendo le quantità come scritte
    - Procedimento, come sequenza di passaggi
 
@@ -35,7 +36,7 @@ Se l'utente allega più screenshot in un solo messaggio e sono ricette diverse, 
 
 8. **Verifica la build**: esegui `npm run build` dalla radice del progetto per controllare che il sito si generi senza errori con la nuova ricetta. Poi elimina la cartella `_site/` generata (non va committata).
 
-9. **Riepiloga** all'utente cosa hai creato (titolo, tipo piatto, tempo se presente, numero ingredienti, tag, se c'è immagine) e chiedi se vuole che tu faccia commit e push su GitHub. Non pubblicare automaticamente: il push va fatto solo quando l'utente lo chiede esplicitamente, come da convenzioni in CLAUDE.md.
+9. **Riepiloga** all'utente cosa hai creato (titolo, tipo piatto, tempo se presente, porzioni se presenti, numero ingredienti, tag, se c'è immagine) e chiedi se vuole che tu faccia commit e push su GitHub. Non pubblicare automaticamente: il push va fatto solo quando l'utente lo chiede esplicitamente, come da convenzioni in CLAUDE.md.
 
 ## Attenzione
 - Se lo screenshot è poco leggibile o alcune informazioni sono ambigue, chiedi chiarimenti invece di inventare dati mancanti.

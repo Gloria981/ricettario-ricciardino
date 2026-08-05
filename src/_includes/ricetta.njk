@@ -13,6 +13,9 @@ layout: base.njk
     {% if tempo_preparazione %}
       <span class="tempo">⏱ {{ tempo_preparazione }}</span>
     {% endif %}
+    {% if porzioni %}
+      <span class="porzioni">🍽 {{ porzioni }}</span>
+    {% endif %}
   </p>
 
   <h2>Ingredienti</h2>
