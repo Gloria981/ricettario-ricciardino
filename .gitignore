@@ -3,3 +3,5 @@ _site/
 .DS_Store
 .env
 .claude/settings.local.json
+inbox-screenshot/*
+!inbox-screenshot/.gitkeep

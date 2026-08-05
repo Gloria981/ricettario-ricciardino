@@ -38,7 +38,12 @@ src/
 eleventy.config.js
 .github/workflows/deploy.yml
 .claude/skills/nuova-ricetta/   skill per creare una ricetta da uno screenshot
+inbox-screenshot/                cartella di appoggio (non tracciata da git) dove salvare gli screenshot da trasformare in ricette
 ```
+
+## Aggiungere gli screenshot delle ricette
+
+Gli screenshot incollati direttamente in chat non sempre corrispondono a un file leggibile su disco (dipende da come vengono allegati), il che impedisce di ritagliare la foto del piatto. Il modo affidabile è salvare lo screenshot come file in `inbox-screenshot/` (basta trascinarlo lì da Finder) prima di chiedere di crearne la ricetta: la skill `nuova-ricetta` lo cerca lì per prima cosa, e lo elimina una volta trasformato in ricetta.
 
 ## Schema di una ricetta (`src/ricette/<slug>.md`)
 

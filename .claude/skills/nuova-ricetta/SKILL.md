@@ -10,9 +10,19 @@ L'utente allega una o più immagini contenenti una ricetta (ingredienti + proced
 
 Se l'utente allega più screenshot in un solo messaggio e sono ricette diverse, ripeti l'intero processo per ciascuna ricetta, creando un file `.md` separato per ognuna.
 
+## Dove trovare il file dello screenshot
+
+Gli screenshot incollati in chat non sempre corrispondono a un file leggibile su disco (dipende da come vengono allegati). Per avere sempre accesso al file vero (necessario per ritagliare la foto del piatto), il modo affidabile è:
+
+1. Controlla per primo la cartella `inbox-screenshot/` nella radice del progetto: è lì che l'utente salva gli screenshot da trasformare in ricette.
+2. Se non trovi lì il file, prova a cercare tra i file immagine modificati di recente (ultimi 15-20 minuti) in `~/Downloads`, `~/Desktop` e `~/Pictures`.
+3. Se non trovi nulla, chiedi all'utente di salvare lo screenshot in `inbox-screenshot/` (basta trascinarlo lì da Finder) e procedi solo con il testo nel frattempo se preferisce non aspettare.
+
+Puoi comunque sempre leggere e interpretare il contenuto dello screenshot visivamente (per il testo della ricetta) anche senza il file su disco: il file serve solo per ritagliare/salvare l'immagine del piatto.
+
 ## Passi
 
-1. **Leggi lo/gli screenshot** allegati con lo strumento Read per capire il contenuto.
+1. **Leggi lo/gli screenshot** (dal file in `inbox-screenshot/` se presente, altrimenti dall'allegato in chat) per capire il contenuto.
 
 2. **Estrai le informazioni testuali** dallo screenshot:
    - Nome della ricetta
@@ -38,6 +48,8 @@ Se l'utente allega più screenshot in un solo messaggio e sono ricette diverse, 
 8. **Verifica la build**: esegui `npm run build` dalla radice del progetto per controllare che il sito si generi senza errori con la nuova ricetta. Poi elimina la cartella `_site/` generata (non va committata).
 
 9. **Riepiloga** all'utente cosa hai creato (titolo, tipo piatto, tempo se presente, porzioni se presenti, numero ingredienti, tag, se c'è immagine, se c'è extra) e chiedi se vuole che tu faccia commit e push su GitHub. Non pubblicare automaticamente: il push va fatto solo quando l'utente lo chiede esplicitamente, come da convenzioni in CLAUDE.md.
+
+10. **Pulisci `inbox-screenshot/`**: una volta creata con successo la ricetta a partire da un file trovato in quella cartella, elimina quel file (il suo contenuto è ormai salvato nel file `.md` e nell'immagine ritagliata).
 
 ## Attenzione
 - Se lo screenshot è poco leggibile o alcune informazioni sono ambigue, chiedi chiarimenti invece di inventare dati mancanti.
