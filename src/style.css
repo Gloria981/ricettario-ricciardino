@@ -115,6 +115,15 @@ main {
   margin-bottom: 0.3rem;
 }
 
+.ricetta-extra {
+  white-space: pre-wrap;
+  color: #4a4038;
+  background: #f5efe6;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  font-size: 0.95rem;
+}
+
 .ricetta-tags {
   margin-top: 2rem;
   display: flex;

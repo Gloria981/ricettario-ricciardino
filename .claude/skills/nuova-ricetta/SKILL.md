@@ -20,6 +20,7 @@ Se l'utente allega più screenshot in un solo messaggio e sono ricette diverse, 
    - Porzioni/numero di persone a cui si riferiscono le quantità, solo se indicato esplicitamente nello screenshot (altrimenti ometti il campo, non inventarlo)
    - Elenco ingredienti, uno per riga, mantenendo le quantità come scritte
    - Procedimento, come sequenza di passaggi
+   - Qualunque altro testo/descrizione presente che non rientra nei campi sopra (es. valori nutrizionali, considerazioni o note dell'autore, voto/valutazione): non scartarlo, va messo per intero nel campo `extra` (vedi passo 7). Non includere invece didascalie puramente social senza contenuto sulla ricetta (call-to-action tipo "commenta per...", hashtag, ringraziamenti/crediti ad altri account).
 
 3. **Determina il tipo di piatto** in autonomia, scegliendo uno tra: `antipasto`, `primo`, `secondo`, `contorno`, `dolce`. Se non è chiaro in quale categoria rientri, chiedi conferma all'utente invece di indovinare.
 
@@ -32,11 +33,11 @@ Se l'utente allega più screenshot in un solo messaggio e sono ricette diverse, 
 
 6. **Determina i tag**: nome della ricetta, un tag per ciascun ingrediente principale (solo il nome, es. "farina" e non "200g di farina"), e il tipo di piatto del passo 3. Tutti i tag in minuscolo, coerenti con eventuali tag già usati in altre ricette (controlla `src/ricette/*.md` esistenti per riusare la stessa dicitura, es. sempre "pomodoro" e non a volte "pomodori").
 
-7. **Crea il file** `src/ricette/<slug>.md` seguendo esattamente lo schema del frontmatter descritto in [CLAUDE.md](../../../CLAUDE.md). Se hai salvato un'immagine, il campo `immagine` deve puntare a `/immagini/<slug>.jpg`.
+7. **Crea il file** `src/ricette/<slug>.md` seguendo esattamente lo schema del frontmatter descritto in [CLAUDE.md](../../../CLAUDE.md). Se hai salvato un'immagine, il campo `immagine` deve puntare a `/immagini/<slug>.jpg`. Se hai raccolto altro testo/descrizione al passo 2, mettilo nel campo `extra` (stringa multi-riga YAML, `extra: |`), così com'era nella fonte, senza riassumerlo.
 
 8. **Verifica la build**: esegui `npm run build` dalla radice del progetto per controllare che il sito si generi senza errori con la nuova ricetta. Poi elimina la cartella `_site/` generata (non va committata).
 
-9. **Riepiloga** all'utente cosa hai creato (titolo, tipo piatto, tempo se presente, porzioni se presenti, numero ingredienti, tag, se c'è immagine) e chiedi se vuole che tu faccia commit e push su GitHub. Non pubblicare automaticamente: il push va fatto solo quando l'utente lo chiede esplicitamente, come da convenzioni in CLAUDE.md.
+9. **Riepiloga** all'utente cosa hai creato (titolo, tipo piatto, tempo se presente, porzioni se presenti, numero ingredienti, tag, se c'è immagine, se c'è extra) e chiedi se vuole che tu faccia commit e push su GitHub. Non pubblicare automaticamente: il push va fatto solo quando l'utente lo chiede esplicitamente, come da convenzioni in CLAUDE.md.
 
 ## Attenzione
 - Se lo screenshot è poco leggibile o alcune informazioni sono ambigue, chiedi chiarimenti invece di inventare dati mancanti.

@@ -62,6 +62,9 @@ ingredienti:
   - "150g di farina"
   - "3 uova"
   - "150g di zucchero"
+extra: |
+  Valori nutrizionali: ~350 kcal a porzione.
+  Considerazioni: perfetta per i compleanni, si mantiene morbida per 3 giorni.
 ---
 1. Sciogliere il cioccolato a bagnomaria.
 2. Montare le uova con lo zucchero.
@@ -78,6 +81,7 @@ Campi:
 - **immagine** (opzionale): percorso assoluto `/immagini/<slug>.<estensione>`, solo se nello screenshot originale era presente una foto del piatto.
 - **tags** (obbligatorio): il nome della ricetta, un tag per ogni ingrediente principale (solo il nome dell'ingrediente, non la quantità), più il tipo di piatto. Sempre minuscolo.
 - **ingredienti** (obbligatorio): elenco con quantità.
+- **extra** (opzionale): testo con altre informazioni presenti nella fonte originale che non rientrano negli altri campi (es. valori nutrizionali, considerazioni/note dell'autore, voto). Non va scartato: se la fonte contiene questi contenuti, vanno riportati qui così com'erano, non riassunti né inventati. Non includere didascalie puramente social (call-to-action, hashtag, ringraziamenti/crediti ad altri account) che non riguardano la ricetta in sé.
 - **corpo del file** (dopo il frontmatter): il procedimento, come elenco numerato.
 
 ### Convenzioni di naming
