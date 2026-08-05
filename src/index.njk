@@ -1,0 +1,18 @@
+---
+layout: base.njk
+title: Ricette
+---
+<h1>Tutte le ricette</h1>
+
+{% if collections.ricette.length == 0 %}
+  <p>Nessuna ricetta ancora. Aggiungine una nella cartella <code>src/ricette/</code>.</p>
+{% else %}
+  <ul class="elenco-ricette">
+    {% for ricetta in collections.ricette %}
+      <li>
+        <a href="{{ ricetta.url | url }}">{{ ricetta.data.titolo }}</a>
+        <span class="badge">{{ ricetta.data.tipo_piatto }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

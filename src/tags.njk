@@ -1,0 +1,16 @@
+---
+layout: base.njk
+title: Tag
+permalink: /tag/
+---
+<h1>Tag</h1>
+
+{% if collections.tagList.length == 0 %}
+  <p>Nessun tag ancora.</p>
+{% else %}
+  <div class="nuvola-tag">
+    {% for tag in collections.tagList %}
+      <a class="tag" href="{{ ('/tag/' + (tag | slug) + '/') | url }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+{% endif %}

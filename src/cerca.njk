@@ -1,0 +1,60 @@
+---
+layout: base.njk
+title: Cerca
+permalink: /cerca/
+---
+<h1>Cerca una ricetta</h1>
+
+<input
+  type="search"
+  id="campo-ricerca"
+  class="campo-ricerca"
+  placeholder="Cerca per nome ricetta..."
+  autocomplete="off"
+>
+
+<ul id="risultati-ricerca" class="elenco-ricette"></ul>
+
+<script>
+  (function () {
+    const campo = document.getElementById("campo-ricerca");
+    const risultati = document.getElementById("risultati-ricerca");
+    let ricette = [];
+
+    fetch("{{ '/ricette-indice.json' | url }}")
+      .then((res) => res.json())
+      .then((dati) => {
+        ricette = dati;
+        disegna(ricette);
+      });
+
+    function disegna(lista) {
+      risultati.innerHTML = "";
+      lista.forEach((ricetta) => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = ricetta.url;
+        a.textContent = ricetta.titolo;
+        const badge = document.createElement("span");
+        badge.className = "badge";
+        badge.textContent = ricetta.tipo_piatto;
+        li.appendChild(a);
+        li.appendChild(document.createTextNode(" "));
+        li.appendChild(badge);
+        risultati.appendChild(li);
+      });
+    }
+
+    campo.addEventListener("input", () => {
+      const query = campo.value.trim().toLowerCase();
+      if (!query) {
+        disegna(ricette);
+        return;
+      }
+      const filtrate = ricette.filter((r) =>
+        r.titolo.toLowerCase().includes(query)
+      );
+      disegna(filtrate);
+    });
+  })();
+</script>

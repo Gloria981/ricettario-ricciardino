@@ -1,0 +1,22 @@
+---
+layout: base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: "/tag/{{ tag | slug }}/"
+eleventyComputed:
+  title: "Tag: {{ tag }}"
+---
+<h1>Ricette con tag &laquo;{{ tag }}&raquo;</h1>
+
+<ul class="elenco-ricette">
+  {% for ricetta in collections[tag] %}
+    <li>
+      <a href="{{ ricetta.url | url }}">{{ ricetta.data.titolo }}</a>
+      <span class="badge">{{ ricetta.data.tipo_piatto }}</span>
+    </li>
+  {% endfor %}
+</ul>
+
+<p><a href="{{ '/tag/' | url }}">&larr; Tutti i tag</a></p>

@@ -1,0 +1,37 @@
+---
+layout: base.njk
+---
+<article class="ricetta">
+  <h1>{{ titolo }}</h1>
+
+  {% if immagine %}
+    <img class="ricetta-immagine" src="{{ immagine | url }}" alt="{{ titolo }}">
+  {% endif %}
+
+  <p class="ricetta-meta">
+    <span class="badge">{{ tipo_piatto }}</span>
+    {% if tempo_preparazione %}
+      <span class="tempo">⏱ {{ tempo_preparazione }}</span>
+    {% endif %}
+  </p>
+
+  <h2>Ingredienti</h2>
+  <ul class="ricetta-ingredienti">
+    {% for ingrediente in ingredienti %}
+      <li>{{ ingrediente }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Procedimento</h2>
+  <div class="ricetta-procedimento">
+    {{ content | safe }}
+  </div>
+
+  {% if tags %}
+    <div class="ricetta-tags">
+      {% for tag in tags %}
+        <a class="tag" href="{{ ('/tag/' + (tag | slug) + '/') | url }}">{{ tag }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</article>

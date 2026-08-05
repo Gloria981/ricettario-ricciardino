@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}Ricettario Ricciardino</title>
+  <link rel="stylesheet" href="{{ '/style.css' | url }}">
+</head>
+<body>
+  <header class="sito-header">
+    <a class="sito-titolo" href="{{ '/' | url }}">Ricettario Ricciardino</a>
+    <nav class="sito-nav">
+      <a href="{{ '/' | url }}">Ricette</a>
+      <a href="{{ '/tag/' | url }}">Tag</a>
+      <a href="{{ '/cerca/' | url }}">Cerca</a>
+    </nav>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer class="sito-footer">
+    <p>Ricettario Ricciardino</p>
+  </footer>
+</body>
+</html>

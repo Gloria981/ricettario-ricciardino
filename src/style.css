@@ -1,0 +1,153 @@
+:root {
+  --colore-testo: #2b2320;
+  --colore-sfondo: #fdfaf6;
+  --colore-accento: #b5502f;
+  --colore-bordo: #e6ddd2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Georgia", "Times New Roman", serif;
+  color: var(--colore-testo);
+  background: var(--colore-sfondo);
+  line-height: 1.6;
+}
+
+.sito-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--colore-bordo);
+}
+
+.sito-titolo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--colore-accento);
+  text-decoration: none;
+}
+
+.sito-nav a {
+  margin-left: 1.25rem;
+  color: var(--colore-testo);
+  text-decoration: none;
+}
+
+.sito-nav a:hover {
+  color: var(--colore-accento);
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+.sito-footer {
+  text-align: center;
+  padding: 2rem;
+  color: #8a7f74;
+  font-size: 0.9rem;
+}
+
+.elenco-ricette {
+  list-style: none;
+  padding: 0;
+}
+
+.elenco-ricette li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--colore-bordo);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.elenco-ricette a {
+  color: var(--colore-testo);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+
+.elenco-ricette a:hover {
+  color: var(--colore-accento);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background: var(--colore-accento);
+  color: white;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.tempo {
+  color: #8a7f74;
+  font-size: 0.9rem;
+}
+
+.ricetta-immagine {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.ricetta-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ricetta-ingredienti li {
+  margin-bottom: 0.3rem;
+}
+
+.ricetta-tags {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.nuvola-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--colore-accento);
+  border-radius: 999px;
+  color: var(--colore-accento);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.tag:hover {
+  background: var(--colore-accento);
+  color: white;
+}
+
+.campo-ricerca {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--colore-bordo);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+}
