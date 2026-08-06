@@ -3,6 +3,7 @@ titolo: "Spiedini kebab"
 porzioni: "4 spiedini"
 tipo_piatto: "secondo"
 tempo_preparazione: "10 minuti"
+immagine: "/immagini/spiedini-kebab.jpg"
 tags:
   - spiedini kebab
   - carne macinata

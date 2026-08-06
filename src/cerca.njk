@@ -9,7 +9,7 @@ permalink: /cerca/
   type="search"
   id="campo-ricerca"
   class="campo-ricerca"
-  placeholder="Cerca per nome ricetta..."
+  placeholder="Cerca per nome, ingrediente, tag..."
   autocomplete="off"
 >
 
@@ -52,7 +52,7 @@ permalink: /cerca/
         return;
       }
       const filtrate = ricette.filter((r) =>
-        r.titolo.toLowerCase().includes(query)
+        r.testoRicerca.includes(query)
       );
       disegna(filtrate);
     });

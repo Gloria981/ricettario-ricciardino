@@ -32,7 +32,7 @@ src/
   index.njk            homepage: elenco alfabetico di tutte le ricette
   tags.njk              /tag/ elenco di tutti i tag
   tag.njk                /tag/<tag>/ pagina di un singolo tag (una per tag, via pagination)
-  cerca.njk              /cerca/ ricerca testuale lato client per nome ricetta
+  cerca.njk              /cerca/ ricerca testuale lato client su tutti i campi della ricetta (titolo, ingredienti, tag, procedimento, ecc.)
   ricette-indice.11ty.js  genera /ricette-indice.json, usato dalla pagina di ricerca
   style.css
 eleventy.config.js
