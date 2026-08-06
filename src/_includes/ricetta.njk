@@ -9,7 +9,9 @@ layout: base.njk
   {% endif %}
 
   <p class="ricetta-meta">
-    <span class="badge">{{ tipo_piatto }}</span>
+    {% for tipo in tipo_piatto %}
+      <span class="badge">{{ tipo }}</span>
+    {% endfor %}
     {% if tempo_preparazione %}
       <span class="tempo">⏱ {{ tempo_preparazione }}</span>
     {% endif %}

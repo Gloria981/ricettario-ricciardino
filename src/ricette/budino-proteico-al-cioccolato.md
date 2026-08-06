@@ -1,7 +1,9 @@
 ---
 titolo: "Budino proteico al cioccolato"
 porzioni: "6 porzioni"
-tipo_piatto: "dolce"
+tipo_piatto:
+  - "colazione"
+  - "dolce"
 tempo_preparazione: "5 minuti"
 immagine: "/immagini/budino-proteico-al-cioccolato.jpg"
 tags:
@@ -12,6 +14,7 @@ tags:
   - cocco
   - mandorle
   - dolce
+  - colazione
 ingredienti:
   - "180g di albumi"
   - "150g di latte di mandorle"

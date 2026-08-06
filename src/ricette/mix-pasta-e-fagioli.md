@@ -1,7 +1,8 @@
 ---
 titolo: "Mix pasta e fagioli"
 porzioni: "3-4 porzioni"
-tipo_piatto: "primo"
+tipo_piatto:
+  - "primo"
 tags:
   - mix pasta e fagioli
   - risoni

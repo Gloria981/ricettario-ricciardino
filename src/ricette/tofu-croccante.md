@@ -1,6 +1,7 @@
 ---
 titolo: "Tofu croccante"
-tipo_piatto: "secondo"
+tipo_piatto:
+  - "secondo"
 tempo_preparazione: "20 minuti"
 tags:
   - tofu croccante

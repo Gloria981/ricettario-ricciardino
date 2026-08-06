@@ -71,13 +71,27 @@ main {
 }
 
 .elenco-ricette a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   color: var(--colore-testo);
   text-decoration: none;
   font-size: 1.05rem;
+  flex: 1;
+  min-width: 0;
 }
 
 .elenco-ricette a:hover {
   color: var(--colore-accento);
+}
+
+.elenco-ricette-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--colore-bordo);
 }
 
 .badge {

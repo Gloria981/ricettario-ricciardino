@@ -10,8 +10,17 @@ title: Ricette
   <ul class="elenco-ricette">
     {% for ricetta in collections.ricette %}
       <li>
-        <a href="{{ ricetta.url | url }}">{{ ricetta.data.titolo }}</a>
-        <span class="badge">{{ ricetta.data.tipo_piatto }}</span>
+        <a href="{{ ricetta.url | url }}">
+          {% if ricetta.data.immagine %}
+            <img class="elenco-ricette-thumb" src="{{ ricetta.data.immagine | url }}" alt="">
+          {% else %}
+            <span class="elenco-ricette-thumb" aria-hidden="true"></span>
+          {% endif %}
+          {{ ricetta.data.titolo }}
+        </a>
+        {% for tipo in ricetta.data.tipo_piatto %}
+          <span class="badge">{{ tipo }}</span>
+        {% endfor %}
       </li>
     {% endfor %}
   </ul>

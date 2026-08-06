@@ -7,7 +7,7 @@ exports.render = function (data) {
   const indice = data.collections.ricette.map((ricetta) => {
     const testoRicerca = [
       ricetta.data.titolo,
-      ricetta.data.tipo_piatto,
+      ...(ricetta.data.tipo_piatto || []),
       ricetta.data.tempo_preparazione,
       ricetta.data.porzioni,
       ...(ricetta.data.tags || []),
@@ -22,7 +22,8 @@ exports.render = function (data) {
     return {
       titolo: ricetta.data.titolo,
       url: this.url(ricetta.url),
-      tipo_piatto: ricetta.data.tipo_piatto,
+      immagine: ricetta.data.immagine ? this.url(ricetta.data.immagine) : null,
+      tipo_piatto: ricetta.data.tipo_piatto || [],
       tags: ricetta.data.tags || [],
       testoRicerca,
     };

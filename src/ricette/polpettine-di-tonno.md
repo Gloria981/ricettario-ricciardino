@@ -1,6 +1,7 @@
 ---
 titolo: "Polpettine di tonno con spinaci, carote e zucchine"
-tipo_piatto: "secondo"
+tipo_piatto:
+  - "secondo"
 immagine: "/immagini/polpettine-di-tonno.jpg"
 tags:
   - polpettine di tonno

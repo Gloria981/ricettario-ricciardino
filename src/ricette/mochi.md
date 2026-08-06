@@ -1,7 +1,9 @@
 ---
 titolo: "Mochi"
 porzioni: "2 merende"
-tipo_piatto: "dolce"
+tipo_piatto:
+  - "merenda"
+  - "dolce"
 tempo_preparazione: "20 minuti"
 tags:
   - mochi
@@ -10,6 +12,7 @@ tags:
   - banana
   - carta di riso
   - dolce
+  - merenda
 ingredienti:
   - "150g di yogurt greco 0%"
   - "10g di cioccolato fondente 85%"

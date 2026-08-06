@@ -1,7 +1,8 @@
 ---
 titolo: "Mix estivo pomodorini e zucchine"
 porzioni: "3-4 porzioni"
-tipo_piatto: "primo"
+tipo_piatto:
+  - "primo"
 tags:
   - mix estivo pomodorini e zucchine
   - risoni

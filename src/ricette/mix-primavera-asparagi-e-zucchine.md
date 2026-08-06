@@ -1,7 +1,8 @@
 ---
 titolo: "Mix primavera con asparagi e zucchine"
 porzioni: "3-4 porzioni"
-tipo_piatto: "primo"
+tipo_piatto:
+  - "primo"
 tags:
   - mix primavera con asparagi e zucchine
   - risoni

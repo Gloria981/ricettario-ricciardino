@@ -54,7 +54,9 @@ Frontmatter YAML + corpo markdown per il procedimento:
 titolo: "Torta al cioccolato"
 tempo_preparazione: "45 minuti"
 porzioni: "4 persone"
-tipo_piatto: "dolce"
+tipo_piatto:
+  - "dolce"
+  - "colazione"
 immagine: "/immagini/torta-al-cioccolato.jpg"
 tags:
   - torta al cioccolato
@@ -62,6 +64,7 @@ tags:
   - farina
   - uova
   - dolce
+  - colazione
 ingredienti:
   - "200g di cioccolato fondente"
   - "150g di farina"
@@ -82,9 +85,9 @@ Campi:
 - **titolo** (obbligatorio): nome della ricetta.
 - **tempo_preparazione** (opzionale): solo se indicato nella fonte originale, non va inventato.
 - **porzioni** (opzionale): per quante persone/porzioni sono le quantità indicate, solo se presente nella fonte originale (es. "4 persone").
-- **tipo_piatto** (obbligatorio): uno tra `antipasto`, `primo`, `secondo`, `contorno`, `dolce`.
+- **tipo_piatto** (obbligatorio): elenco di uno o più tra `antipasto`, `primo`, `secondo`, `contorno`, `dolce`, `colazione`, `merenda`. Una ricetta può appartenere a più categorie (es. un budino che è sia "dolce" che "colazione").
 - **immagine** (opzionale): percorso assoluto `/immagini/<slug>.<estensione>`, solo se nello screenshot originale era presente una foto del piatto.
-- **tags** (obbligatorio): il nome della ricetta, un tag per ogni ingrediente principale (solo il nome dell'ingrediente, non la quantità), più il tipo di piatto. Sempre minuscolo.
+- **tags** (obbligatorio): il nome della ricetta, un tag per ogni ingrediente principale (solo il nome dell'ingrediente, non la quantità), più tutti i valori di tipo_piatto. Sempre minuscolo.
 - **ingredienti** (obbligatorio): elenco con quantità.
 - **extra** (opzionale): testo con altre informazioni presenti nella fonte originale che non rientrano negli altri campi (es. valori nutrizionali, considerazioni/note dell'autore, voto). Non va scartato: se la fonte contiene questi contenuti, vanno riportati qui così com'erano, non riassunti né inventati. Non includere didascalie puramente social (call-to-action, hashtag, ringraziamenti/crediti ad altri account) che non riguardano la ricetta in sé.
 - **corpo del file** (dopo il frontmatter): il procedimento, come elenco numerato.

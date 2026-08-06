@@ -1,7 +1,8 @@
 ---
 titolo: "Focaccia di zucchine"
 porzioni: "3 porzioni"
-tipo_piatto: "contorno"
+tipo_piatto:
+  - "contorno"
 tempo_preparazione: "30-35 minuti"
 immagine: "/immagini/focaccia-di-zucchine.jpg"
 tags:

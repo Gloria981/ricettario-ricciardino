@@ -1,6 +1,7 @@
 ---
 titolo: "Polpette di ceci"
-tipo_piatto: "secondo"
+tipo_piatto:
+  - "secondo"
 tempo_preparazione: "20 minuti"
 immagine: "/immagini/polpette-di-ceci.jpg"
 tags:

@@ -1,7 +1,8 @@
 ---
 titolo: "Pollo panato"
 porzioni: "4 persone"
-tipo_piatto: "secondo"
+tipo_piatto:
+  - "secondo"
 immagine: "/immagini/pollo-panato.jpg"
 tags:
   - pollo panato

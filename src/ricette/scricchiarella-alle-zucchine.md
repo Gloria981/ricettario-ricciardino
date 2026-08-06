@@ -1,6 +1,7 @@
 ---
 titolo: "Scricchiarella alle zucchine"
-tipo_piatto: "antipasto"
+tipo_piatto:
+  - "antipasto"
 tempo_preparazione: "15-20 minuti"
 immagine: "/immagini/scricchiarella-alle-zucchine.jpg"
 tags:

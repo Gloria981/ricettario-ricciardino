@@ -1,7 +1,9 @@
 ---
 titolo: "Tortini avena e cioccolato"
 porzioni: "4 tortini"
-tipo_piatto: "dolce"
+tipo_piatto:
+  - "colazione"
+  - "dolce"
 tempo_preparazione: "20 minuti"
 immagine: "/immagini/tortini-avena-e-cioccolato.jpg"
 tags:
@@ -10,6 +12,7 @@ tags:
   - yogurt greco
   - cioccolato
   - dolce
+  - colazione
 ingredienti:
   - "60g di farina di avena"
   - "120g di yogurt greco bianco 0%"

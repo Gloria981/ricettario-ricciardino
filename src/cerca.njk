@@ -34,13 +34,28 @@ permalink: /cerca/
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = ricetta.url;
-        a.textContent = ricetta.titolo;
-        const badge = document.createElement("span");
-        badge.className = "badge";
-        badge.textContent = ricetta.tipo_piatto;
+
+        if (ricetta.immagine) {
+          const thumb = document.createElement("img");
+          thumb.className = "elenco-ricette-thumb";
+          thumb.src = ricetta.immagine;
+          thumb.alt = "";
+          a.appendChild(thumb);
+        } else {
+          const thumb = document.createElement("span");
+          thumb.className = "elenco-ricette-thumb";
+          a.appendChild(thumb);
+        }
+        a.appendChild(document.createTextNode(ricetta.titolo));
         li.appendChild(a);
-        li.appendChild(document.createTextNode(" "));
-        li.appendChild(badge);
+
+        (ricetta.tipo_piatto || []).forEach((tipo) => {
+          const badge = document.createElement("span");
+          badge.className = "badge";
+          badge.textContent = tipo;
+          li.appendChild(badge);
+        });
+
         risultati.appendChild(li);
       });
     }

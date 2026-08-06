@@ -1,6 +1,7 @@
 ---
 titolo: "Cordon bleu di melanzane e zucchine"
-tipo_piatto: "secondo"
+tipo_piatto:
+  - "secondo"
 tempo_preparazione: "30 minuti"
 tags:
   - cordon bleu di melanzane e zucchine

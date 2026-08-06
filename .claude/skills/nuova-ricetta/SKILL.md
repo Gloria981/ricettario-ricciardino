@@ -32,7 +32,7 @@ Puoi comunque sempre leggere e interpretare il contenuto dello screenshot visiva
    - Procedimento, come sequenza di passaggi
    - Qualunque altro testo/descrizione presente che non rientra nei campi sopra (es. valori nutrizionali, considerazioni o note dell'autore, voto/valutazione): non scartarlo, va messo per intero nel campo `extra` (vedi passo 7). Non includere invece didascalie puramente social senza contenuto sulla ricetta (call-to-action tipo "commenta per...", hashtag, ringraziamenti/crediti ad altri account).
 
-3. **Determina il tipo di piatto** in autonomia, scegliendo uno tra: `antipasto`, `primo`, `secondo`, `contorno`, `dolce`. Se non è chiaro in quale categoria rientri, chiedi conferma all'utente invece di indovinare.
+3. **Determina il tipo di piatto** in autonomia: è un elenco (come i tag), quindi puoi assegnare più di una categoria se la ricetta rientra in entrambe, scegliendo tra `antipasto`, `primo`, `secondo`, `contorno`, `dolce`, `colazione`, `merenda`. Usa `colazione`/`merenda` quando la fonte lo indica esplicitamente (es. testo, hashtag) o quando è un piatto tipico per quel momento della giornata (es. un dolce leggero a base di yogurt). Se non è chiaro in quale categoria rientri, chiedi conferma all'utente invece di indovinare.
 
 4. **Genera lo slug** del nome ricetta: minuscolo, senza accenti né caratteri speciali, spazi sostituiti da trattini. Esempio: "Torta al cioccolato" → `torta-al-cioccolato`. Verifica che `src/ricette/<slug>.md` non esista già: se esiste, chiedi all'utente come procedere (sovrascrivere, rinominare, annullare) invece di sovrascrivere in automatico.
 
@@ -41,7 +41,7 @@ Puoi comunque sempre leggere e interpretare il contenuto dello screenshot visiva
    - Se lo screenshot contiene sia testo che una foto delimitata del piatto, prova a ritagliare solo la porzione fotografica con uno strumento disponibile sul sistema (Python+Pillow, ImageMagick `convert -crop`, o `sips` su macOS). Se non riesci a ritagliare in modo affidabile, chiedi all'utente se preferisce l'immagine intera oppure nessuna immagine.
    - Se lo screenshot è solo testo, senza alcuna foto del piatto, non creare l'immagine e ometti il campo `immagine`.
 
-6. **Determina i tag**: nome della ricetta, un tag per ciascun ingrediente principale (solo il nome, es. "farina" e non "200g di farina"), e il tipo di piatto del passo 3. Tutti i tag in minuscolo, coerenti con eventuali tag già usati in altre ricette (controlla `src/ricette/*.md` esistenti per riusare la stessa dicitura, es. sempre "pomodoro" e non a volte "pomodori").
+6. **Determina i tag**: nome della ricetta, un tag per ciascun ingrediente principale (solo il nome, es. "farina" e non "200g di farina"), e tutti i valori di tipo di piatto del passo 3. Tutti i tag in minuscolo, coerenti con eventuali tag già usati in altre ricette (controlla `src/ricette/*.md` esistenti per riusare la stessa dicitura, es. sempre "pomodoro" e non a volte "pomodori").
 
 7. **Crea il file** `src/ricette/<slug>.md` seguendo esattamente lo schema del frontmatter descritto in [CLAUDE.md](../../../CLAUDE.md). Se hai salvato un'immagine, il campo `immagine` deve puntare a `/immagini/<slug>.jpg`. Se hai raccolto altro testo/descrizione al passo 2, mettilo nel campo `extra` (stringa multi-riga YAML, `extra: |`), così com'era nella fonte, senza riassumerlo.
 
