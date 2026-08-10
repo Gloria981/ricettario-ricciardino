@@ -1,14 +1,14 @@
 ---
 titolo: "Ceci croccanti al forno"
 tipo_piatto:
-  - "antipasto"
+  - "spuntino"
 tempo_preparazione: "10 minuti"
 tags:
   - ceci croccanti al forno
   - ceci
   - paprika
   - olio extravergine di oliva
-  - antipasto
+  - spuntino
 ingredienti:
   - "ceci cotti q.b. (anche in barattolo, ben sciacquati)"
   - "paprika o spezie preferite q.b."

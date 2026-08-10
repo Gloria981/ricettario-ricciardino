@@ -2,6 +2,7 @@
 titolo: "Scricchiarella alle zucchine"
 tipo_piatto:
   - "antipasto"
+  - "spuntino"
 tempo_preparazione: "15-20 minuti"
 immagine: "/immagini/scricchiarella-alle-zucchine.jpg"
 tags:
@@ -10,6 +11,7 @@ tags:
   - farina di ceci
   - olio extravergine di oliva
   - antipasto
+  - spuntino
 ingredienti:
   - "2 zucchine tritate"
   - "1 cucchiaio di olio extravergine di oliva"
